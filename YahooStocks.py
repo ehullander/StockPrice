@@ -4,13 +4,16 @@ import yfinance as yf
 from datetime import datetime, timedelta
 import psycopg2
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
+from statsmodels.tsa.api import VAR
+import pickle
 
 # stocks = "MSFT AAPL GOOG TSLA AMZN FB KIRK V MA UNH NFLX CRM NKE HD COST KO AMT LOW UPS ZM MMM"
 #data = yf.download(stocks, start=start, end=end, interval='5m', group_by='ticker')
 
 
-class DataDownloader:
+class Stocks:
     def __init__(self, stocks):
         self.stocks = stocks
         self.raw_data = None
@@ -86,7 +89,7 @@ class DataDownloader:
 
     def plot_raw(self, metric='Close', scale=None):
         #scale is the value at index 'scale' by which to scale each series by. 0 is first value, -1 is last
-        for stock in self.stocks.split():
+        for stock in sorted(self.stocks.split()):
             values = self.raw_data[stock][metric]
             if scale is not None:
                 values = values / values.iloc[scale]
@@ -107,5 +110,38 @@ class PSQLConnector:
 
     def execute(self, sql):
         self.cur.execute(sql)
+
+
+class Model:
+    def __init__(self, data=None, save=True):
+        self.data = data
+        self.model = None
+        self.results = None
+        self.save = save
+        self.fcast = None
+
+    def fitVAR(self, lags=100):
+        self.model = VAR(self.data)
+        self.results = self.model.fit(lags)
+        if self.save:
+            pickle.dump(self.results, open("model/frozen{0}.p".format(lags), "wb"))
+
+    def forecast(self, horizon):
+        lag_order = self.results.k_ar
+        self.fcast = pd.DataFrame(self.results.forecast(self.data.values[-lag_order:], horizon))
+        self.fcast.columns = self.data.columns
+        self.fcast.index = range(self.data.shape[0], self.data.shape[0] + self.fcast.shape[0])
+
+    def plot_fcast(self):
+        past_future = pd.concat((self.data, self.fcast))
+        past_future.plot(alpha = .5)
+        ymin = np.min(np.min(past_future))
+        ymax = np.max(np.max(past_future))
+        plt.vlines(x=self.data.shape[0], ymin=ymin, ymax=ymax, color='r')
+        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', ncol=int(len(self.data.columns) / 10) + 1)
+        plt.xticks(rotation=90)
+        plt.show()
+
+
 
 

@@ -2,3 +2,5 @@
 *.p
 .idea/
 .ipynb_checkpoints/
+/data
+/model

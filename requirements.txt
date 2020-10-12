@@ -1,83 +1,135 @@
-argon2-cffi @ file:///tmp/build/80754af9/argon2-cffi_1596828493937/work
-async-generator==1.10
-attrs @ file:///tmp/build/80754af9/attrs_1600298409949/work
-backcall==0.2.0
-bleach @ file:///tmp/build/80754af9/bleach_1600439572647/work
-brotlipy==0.7.0
-certifi==2020.6.20
-cffi @ file:///tmp/build/80754af9/cffi_1600699146221/work
-chardet==3.0.4
-cryptography @ file:///tmp/build/80754af9/cryptography_1601046815590/work
-cycler==0.10.0
-decorator==4.4.2
-defusedxml==0.6.0
-entrypoints==0.3
-idna @ file:///tmp/build/80754af9/idna_1593446292537/work
-importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1602276842396/work
-ipykernel @ file:///tmp/build/80754af9/ipykernel_1596207638929/work/dist/ipykernel-5.3.4-py3-none-any.whl
-ipython @ file:///tmp/build/80754af9/ipython_1598883821407/work
-ipython-genutils==0.2.0
-ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1601490159889/work
-jedi @ file:///tmp/build/80754af9/jedi_1598371611696/work
-Jinja2==2.11.2
-jsonschema @ file:///tmp/build/80754af9/jsonschema_1601490578438/work
-jupyter==1.0.0
-jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1601311786391/work
-jupyter-console @ file:///tmp/build/80754af9/jupyter_console_1598884538475/work
-jupyter-core==4.6.3
-jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
-kiwisolver==1.2.0
-lxml==4.5.2
-MarkupSafe==1.1.1
-matplotlib @ file:///tmp/build/80754af9/matplotlib-base_1597876319132/work
-mistune==0.8.4
-mkl-fft==1.2.0
-mkl-random==1.1.1
-mkl-service==2.3.0
-multitasking==0.0.9
-nbclient @ file:///tmp/build/80754af9/nbclient_1601059699549/work
-nbconvert @ file:///tmp/build/80754af9/nbconvert_1601914830498/work
-nbformat==5.0.7
-nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1601499549014/work
-notebook @ file:///tmp/build/80754af9/notebook_1601501575118/work
-numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1596233721170/work
-olefile==0.46
-packaging==20.4
-pandas @ file:///tmp/build/80754af9/pandas_1602088120436/work
-pandocfilters==1.4.2
-parso==0.7.0
-patsy==0.5.1
-pexpect==4.8.0
-pickleshare==0.7.5
-Pillow @ file:///tmp/build/80754af9/pillow_1594307295532/work
-prometheus-client==0.8.0
-prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1598885458782/work
-psycopg2-binary==2.8.6
-ptyprocess==0.6.0
-pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
-Pygments @ file:///tmp/build/80754af9/pygments_1600458456400/work
-pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
-pyparsing==2.4.7
-pyrsistent @ file:///tmp/build/80754af9/pyrsistent_1600141720057/work
-PySocks==1.7.1
-python-dateutil==2.8.1
-pytz==2020.1
-pyzmq==19.0.2
-qtconsole @ file:///tmp/build/80754af9/qtconsole_1600870028330/work
-QtPy==1.9.0
-requests @ file:///tmp/build/80754af9/requests_1592841827918/work
-scipy @ file:///tmp/build/80754af9/scipy_1597686649129/work
-Send2Trash==1.5.0
-sip==4.19.13
-six==1.15.0
-statsmodels @ file:///tmp/build/80754af9/statsmodels_1602280205159/work
-terminado==0.9.1
-testpath==0.4.4
-tornado==6.0.4
-traitlets @ file:///tmp/build/80754af9/traitlets_1600712396819/work
-urllib3 @ file:///tmp/build/80754af9/urllib3_1597086586889/work
-wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
-webencodings==0.5.1
-widgetsnbextension==3.5.1
-yfinance==0.1.55
-zipp @ file:///tmp/build/80754af9/zipp_1602002379921/work
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+_libgcc_mutex=0.1=main
+argon2-cffi=20.1.0=py38h7b6447c_1
+async_generator=1.10=py_0
+attrs=20.2.0=py_0
+backcall=0.2.0=py_0
+blas=1.0=mkl
+bleach=3.2.1=py_0
+brotlipy=0.7.0=py38h7b6447c_1000
+ca-certificates=2020.7.22=0
+certifi=2020.6.20=py38_0
+cffi=1.14.3=py38he30daa8_0
+chardet=3.0.4=py38_1003
+cryptography=3.1.1=py38h1ba5d50_0
+cycler=0.10.0=py38_0
+dbus=1.13.16=hb2f20db_0
+decorator=4.4.2=py_0
+defusedxml=0.6.0=py_0
+entrypoints=0.3=py38_0
+expat=2.2.10=he6710b0_2
+fontconfig=2.13.0=h9420a91_0
+freetype=2.10.2=h5ab3b9f_0
+glib=2.65.0=h3eb4bd4_0
+gst-plugins-base=1.14.0=hbbd80ab_1
+gstreamer=1.14.0=hb31296c_0
+icu=58.2=he6710b0_3
+idna=2.10=py_0
+importlib-metadata=2.0.0=py_1
+importlib_metadata=2.0.0=1
+intel-openmp=2020.2=254
+ipykernel=5.3.4=py38h5ca1d4c_0
+ipython=7.18.1=py38h5ca1d4c_0
+ipython_genutils=0.2.0=py38_0
+ipywidgets=7.5.1=py_1
+jedi=0.17.2=py38_0
+jinja2=2.11.2=py_0
+jpeg=9b=h024ee3a_2
+jsonschema=3.2.0=py38_1
+jupyter=1.0.0=py38_7
+jupyter_client=6.1.7=py_0
+jupyter_console=6.2.0=py_0
+jupyter_core=4.6.3=py38_0
+jupyterlab_pygments=0.1.2=py_0
+kiwisolver=1.2.0=py38hfd86e86_0
+lcms2=2.11=h396b838_0
+ld_impl_linux-64=2.33.1=h53a641e_7
+libedit=3.1.20191231=h14c3975_1
+libffi=3.3=he6710b0_2
+libgcc-ng=9.1.0=hdf63c60_0
+libgfortran-ng=7.3.0=hdf63c60_0
+libpng=1.6.37=hbc83047_0
+libsodium=1.0.18=h7b6447c_0
+libstdcxx-ng=9.1.0=hdf63c60_0
+libtiff=4.1.0=h2733197_1
+libuuid=1.0.3=h1bed415_2
+libxcb=1.14=h7b6447c_0
+libxml2=2.9.10=he19cac6_1
+lxml=4.5.2=pypi_0
+lz4-c=1.9.2=heb0550a_3
+markupsafe=1.1.1=py38h7b6447c_0
+matplotlib=3.3.1=0
+matplotlib-base=3.3.1=py38h817c723_0
+mistune=0.8.4=py38h7b6447c_1000
+mkl=2020.2=256
+mkl-service=2.3.0=py38he904b0f_0
+mkl_fft=1.2.0=py38h23d657b_0
+mkl_random=1.1.1=py38h0573a6f_0
+multitasking=0.0.9=pypi_0
+nbclient=0.5.0=py_0
+nbconvert=6.0.7=py38_0
+nbformat=5.0.7=py_0
+ncurses=6.2=he6710b0_1
+nest-asyncio=1.4.1=py_0
+notebook=6.1.4=py38_0
+numpy=1.19.1=py38hbc911f0_0
+numpy-base=1.19.1=py38hfa32c7d_0
+olefile=0.46=py_0
+openssl=1.1.1h=h7b6447c_0
+packaging=20.4=py_0
+pandas=1.1.3=py38he6710b0_0
+pandoc=2.10.1=0
+pandocfilters=1.4.2=py38_1
+parso=0.7.0=py_0
+patsy=0.5.1=py38_0
+pcre=8.44=he6710b0_0
+pexpect=4.8.0=py38_0
+pickleshare=0.7.5=py38_1000
+pillow=7.2.0=py38hb39fc2d_0
+pip=20.2.3=py38_0
+prometheus_client=0.8.0=py_0
+prompt-toolkit=3.0.7=py_0
+prompt_toolkit=3.0.7=0
+psycopg2-binary=2.8.6=pypi_0
+ptyprocess=0.6.0=py38_0
+pycparser=2.20=py_2
+pygments=2.7.1=py_0
+pyopenssl=19.1.0=py_1
+pyparsing=2.4.7=py_0
+pyqt=5.9.2=py38h05f1152_4
+pyrsistent=0.17.3=py38h7b6447c_0
+pysocks=1.7.1=py38_0
+python=3.8.5=h7579374_1
+python-dateutil=2.8.1=py_0
+pytz=2020.1=py_0
+pyzmq=19.0.2=py38he6710b0_1
+qt=5.9.7=h5867ecd_1
+qtconsole=4.7.7=py_0
+qtpy=1.9.0=py_0
+readline=8.0=h7b6447c_0
+requests=2.24.0=py_0
+scipy=1.5.2=py38h0b6359f_0
+send2trash=1.5.0=py38_0
+setuptools=50.3.0=py38hb0f4dca_1
+sip=4.19.13=py38he6710b0_0
+six=1.15.0=py_0
+sqlite=3.33.0=h62c20be_0
+statsmodels=0.12.0=py38h7b6447c_0
+terminado=0.9.1=py38_0
+testpath=0.4.4=py_0
+tk=8.6.10=hbc83047_0
+tornado=6.0.4=py38h7b6447c_1
+traitlets=5.0.4=py38_0
+urllib3=1.25.10=py_0
+wcwidth=0.2.5=py_0
+webencodings=0.5.1=py38_1
+wheel=0.35.1=py_0
+widgetsnbextension=3.5.1=py38_0
+xz=5.2.5=h7b6447c_0
+yfinance=0.1.55=pypi_0
+zeromq=4.3.2=he6710b0_3
+zipp=3.3.0=py_0
+zlib=1.2.11=h7b6447c_3
+zstd=1.4.5=h9ceee32_0

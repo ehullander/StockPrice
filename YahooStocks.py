@@ -39,8 +39,8 @@ class Stocks:
         self.transformed_data.columns = ['symbol', 'price']
         self.transformed_data = self.transformed_data.sort_values('symbol')
 
-    def get_PSQL(self, dbname, user, host, password):
-        self.PSQL = PSQLConnector(dbname, user, host, password)
+    def get_PSQL(self, dbname, user, host):
+        self.PSQL = PSQLConnector(dbname, user, host)
 
     def insert_SQL(self, table=None):
         drop_table_sql = """drop table StockPrice;"""
@@ -55,7 +55,7 @@ class Stocks:
         insert_sql = """INSERT INTO {0} (datetime, symbol, price) VALUES {1};"""
 
         if self.PSQL is None:
-            self.get_PSQL('stocks', 'postgres', 'localhost', 'password')
+            self.get_PSQL('stocks', 'postgres', 'localhost')
         if table is None:
             table = 'stockprice'
         if self.raw_data is None:
@@ -78,7 +78,7 @@ class Stocks:
 
     def read_SQL(self, table):
         if self.PSQL is None:
-            self.get_PSQL('stocks', 'postgres', 'localhost', 'password')
+            self.get_PSQL('stocks', 'postgres', 'localhost')
         sql = """SELECT * from {0};""".format(table)
         self.PSQL.execute(sql)
         self.transformed_data = pd.DataFrame(self.PSQL.cur.fetchall())
@@ -101,11 +101,10 @@ class Stocks:
 
 
 class PSQLConnector:
-    def __init__(self, dbname, user, host, password):
+    def __init__(self, dbname, user, host):
         self.conn = psycopg2.connect("dbname={0} \
         user={1} \
-        host={2} \
-        password={3}".format(dbname, user, host, password))
+        host={2}".format(dbname, user, host))
         self.cur = self.conn.cursor()
 
     def execute(self, sql):

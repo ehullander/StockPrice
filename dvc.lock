@@ -1,0 +1,8 @@
+evaluate:
+  cmd: python getMASE.py
+  deps:
+  - path: getMASE.py
+    md5: 1985a230ba8589a443e069d1d37bbea3
+  outs:
+  - path: metrics.json
+    md5: 3fa644c2fe5e58c323cdd51f64eaa655

@@ -1,0 +1,8 @@
+stages:
+  evaluate:
+    cmd: python getMASE.py
+    deps:
+    - getMASE.py
+    metrics:
+    - metrics.json:
+        cache: false

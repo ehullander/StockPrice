@@ -1,4 +1,4 @@
 [core]
     remote = myremote
 ['remote "myremote"']
-    url = ../remote
+    url = /home/erichullander/Projects/VARSTockPrice/remote

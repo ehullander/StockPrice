@@ -68,7 +68,11 @@ class Stocks:
                 values += "('{0}', '{1}', {2}),".format(ts, sym, tmp.loc[ts])
         values = ''.join(list(values)[0:-1])
         # remove old table
-        self.PSQL.execute(drop_table_sql)
+        try:
+            self.PSQL.execute(drop_table_sql)
+            self.PSQL.cur.execute('COMMIT')
+        except:
+            print('no stockprice table')
         # create fresh
         self.PSQL.execute(create_table_sql)
         # insert data

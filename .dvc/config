@@ -1,4 +1,4 @@
 [core]
     remote = myremote
 ['remote "myremote"']
-    url = /home/erichullander/Projects/VARStockPrice/remote
+    url = /datasets/CoreSci-DevOps/StockData
